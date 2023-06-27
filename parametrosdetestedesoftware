@@ -1,0 +1,1809 @@
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+RESUMO DA UNIDADE
+Esta unidade analisará os princípios dos Parâmetros de Testes de Qualidade de 
+Software, apresentando aos estudantes conceitos, princípios, abordagens e normas 
+técnicas que orientam o processo de produção de software e a garantia da 
+qualidade do mesmo. Nesse sentido, são descritos no primeiro capítulo os conceitos 
+relacionados à qualidade de software, já no segundo capítulo são apresentados 
+padrões e normas técnicas que orientam o aperfeiçoamento dos processos de 
+construção de um software e a avaliação do mesmo, de modo a direcionar sua 
+criação e produção. O capítulo seguinte aborda conceitos relacionados à etapa de 
+teste de software. A proposta desta unidade, portanto, é apresentar considerações 
+gerais sobre a construção de software, parâmetros, avaliações e testes, sempre no 
+contexto e garantia da qualidade de software.
+Palavras-chave: Qualidade de Software; Parâmetros; Normas Técnicas; Teste de 
+Software.
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+SUMÁRIO
+RESUMO DA UNIDADE............................................................................................................1
+APRESENTAÇÃO DO MÓDULO..............................................................................................3
+CAPÍTULO 1 – QUALIDADE DE SOFTWARE.........................................................................5
+1.1 PRINCÍPIOS DA QUALIDADE DE SOFTWARE........................................................5
+1.1.1 Qualidade do Processo ...............................................................................................5
+1.1.2 Qualidade do Produto..................................................................................................5
+1.2 O PROCESSO DE DESENVOLVIMENTO DE SOFTWARE E A QUALIDADE........6
+1.3 Gerência da Qualidade................................................................................................9
+1.4 Métricas da Qualidade de Software ..........................................................................10
+1.4.1 Categoria das Métricas..............................................................................................11
+1.4.2 Características das Métricas .....................................................................................13
+1.4.3 Aplicação de Métricas................................................................................................13
+1.5 Garantia da Qualidade...............................................................................................14
+1.5.1 Metas do SQA............................................................................................................16
+CAPÍTULO 2 – MODELOS E TÉCNICAS PARA AVALIAÇÃO E APERFEIÇOAMENTO 
+DOS PROCESSOS DE SOFTWARE......................................................................................18
+2.1 CMM e CMMI.............................................................................................................18
+2.1.1 CMM...........................................................................................................................18
+2.1.2 CMMI..........................................................................................................................27
+2.2 NORMAS ISO 12207 E ISO 15504...........................................................................30
+2.2.1 Norma ISO 12207......................................................................................................30
+2.2.2 Norma ISO 15504......................................................................................................32
+2.3 MPS.BR......................................................................................................................34
+2.4 COMPARATIVO ENTRE OS MODELOS CMM/CMMI, NORMAS ISO12207/15504 
+E MPS.BR.................................................................................................................................37
+CAPÍTULO 3 – TESTE DE SOFTWARE.................................................................................39
+3.1 VERIFICAÇÃO E VALIDAÇÃO DE SOFTWARE .....................................................39
+3.2 PROCESSO DE TESTE DE SOFTWARE................................................................40
+3.3 PRINCÍPIOS, ESTRATÉGIAS E FASES DE TESTES DE SOFTWARE.................42
+3.4 FUNDAMENTOS E TÉCNICAS DE TESTES...........................................................45
+3.5 AUTOMAÇÃO DOS TESTES....................................................................................46
+CONSIDERAÇÕES FINAIS.....................................................................................................48
+REFERÊNCIAS........................................................................................................................49
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+APRESENTAÇÃO DO MÓDULO
+Nos dias atuais, o quesito qualidade consiste em uma realidade e exigência de 
+mercado, independente do segmento no qual o empreendimento/organização estão 
+inseridos. No que diz respeito à produção de software o cenário não é diferente, 
+softwares que cumpram com eficácia suas funcionalidades e satisfaçam as 
+expectativas e necessidades do cliente/usuário se tornaram essenciais.
+Para garantir a qualidade no processo de produção de um software, são 
+estabelecidos procedimentos, parâmetros, métricas e medidas, cuja aplicabilidade, 
+aliada às orientações de normas técnicas, é capaz de verificar se um determinado 
+produto de software se encaixa ou não em padrões aceitáveis. 
+Dado esse contexto, a presente unidade se propõe a embasar o estudante 
+quanto à necessidade de alcançar a qualidade no processo de produção de software 
+e de sua validação. Para isso, estão descritos nas próximas páginas inúmeros
+conceitos a cerca de Qualidade de Software que visam orientar e fundamentar o 
+leitor no que tange a esse universo.
+Sendo assim, o Capítulo 1 apresenta uma pequena introdução e os princípios 
+da Qualidade de Software, diferenciando os conceitos entre a Qualidade do Produto 
+e do Processo. O capítulo referencia ainda como se dá o processo de 
+desenvolvimento de um software e como o conceito da qualidade deve estar inserido 
+durante esse processo. Também são expostas métricas a serem seguidas e 
+executadas a fim de adquirir a qualidade de um software, padrões e processos a 
+serem estabelecidos para sua gerência, e como garantir a existência da mesma 
+durante todo o processo de criação do software, bem como no produto final 
+construído.
+Já o Capítulo 2 apresenta ao estudante padrões e normas técnicas, como o 
+CMM (Capability Maturity Model) e CMMI (Capability Maturity Model Integration), as 
+ISO’s 12207 e 15504 e o padrão MPS.BR (Modelo de Melhoria de Processo do 
+Software Brasileiro). Esses padrões e normas servem como base para orientar todo 
+o processo de desenvolvimento de um software, de forma a garantir a qualidade em 
+sua criação. É apresentado ainda um pequeno comparativo entre eles.
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Por fim, o Capítulo 3 apresenta os conceitos básicos a cerca de Testes de 
+Software, que consistem em uma das etapas do processo de criação e 
+desenvolvimento. Nesse contexto, são apresentados os conceitos de verificação e 
+validação e o que os diferencia. É descrito ainda o processo a ser seguido em um 
+teste de software, suas fases, os princípios e estratégias que podem e devem ser 
+abordadas durante esse processo. O capítulo finaliza com a exposição de 
+ferramentas de automação comumente utilizadas no dia a dia empresarial, no auxílio 
+e na aplicabilidade de inúmeros testes de software realizados.
+Espera-se que o conteúdo apresentado nesta unidade leve os estudantes a 
+compreenderem a importância do quesito qualidade durante a criação e o 
+desenvolvimento de um software, sendo algo essencial a ser considerado, tanto no 
+âmbito consumidor ao adquirir um produto de software, como no âmbito fornecedor 
+ao atuar no processo de criação e desenvolvimento de um produto de software.
+5
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+CAPÍTULO 1 – QUALIDADE DE SOFTWARE
+1.1 PRINCÍPIOS DA QUALIDADE DE SOFTWARE
+O termo qualidade pode ser definido, segundo o dicionário online da língua 
+portuguesa Michaelis, como “grau de perfeição, de precisão ou de conformidade a 
+certo padrão” (MICHAELIS, 2020). Em um grau mais específico pode-se definir a 
+qualidade de um produto como sendo a totalidade de suas características que 
+determina a sua habilidade em satisfazer um determinado usuário.
+Avaliar a qualidade de um produto ou serviço é uma ação necessária, uma vez 
+que os usuários estão cada vez mais exigentes no que diz respeito à qualidade 
+desse produto (serviço). Na visão do usuário, um produto de qualidade é aquele que 
+atende as suas necessidades, e que, ao mesmo tempo, seja fácil de usar e funcione 
+em seu ambiente organizacional (SILVA, 2003).
+A Engenharia de Software tem como um dos seus objetivos principais 
+determinar a qualidade de um software. A qualidade de um software engloba duas 
+diferentes vertentes: a Qualidade do Processo e a Qualidade do Produto. 
+1.1.1 Qualidade do Processo
+O estudo relacionado à Qualidade do Processo de um Software consiste em
+uma área ligada diretamente à Engenharia de Software, tal a relevância dessa área 
+é que o estudo de um processo pode ajudar na compreensão e no aprimoramento 
+de outro processo. 
+O estudo de modelos do processo de desenvolvimento de software tem por 
+objetivo maior explicar em detalhes como se desenvolve um software e quais são as 
+etapas envolvidas. É necessário compreender todas as tarefas pertencentes ao
+processo de desenvolvimento e garantir a qualidade em cada uma delas. 
+1.1.2 Qualidade do Produto
+O estudo da Qualidade do Produto, assim como o da Qualidade do Processo, 
+também é uma área ligada diretamente à Engenharia de Software. 
+A qualidade de um produto de software resulta das atividades realizadas em 
+seu processo de desenvolvimento. Avaliar a qualidade de um produto de software é 
+6
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+verificar, com o auxílio de técnicas específicas, o quanto cada requisito é atendido. 
+Estes requisitos expressam as necessidades do usuário e têm por objetivo definir as 
+características de um software (SILVA, 2003). 
+Um estudo que está ligado diretamente à qualidade do produto é a sua 
+interface de utilização, também conhecida como Interface Humano-Computador
+(IHC). Trata-se de uma área com extrema relevância, tendo em vista a frustração do
+usuário diante da dificuldade de obter no software o apoio necessário para executar 
+suas funcionalidades, situação que pode conduzir, até mesmo, ao abandono do 
+produto por parte do usuário.
+1.2 O PROCESSO DE DESENVOLVIMENTO DE SOFTWARE E A QUALIDADE
+Segundo Pressman, o processo de desenvolvimento de um software é definido 
+como uma metodologia para as atividades, ações e tarefas necessárias para 
+desenvolver um software de alta qualidade (PRESSMAN, 2011). O autor ainda 
+define as cinco etapas que contemplam o ciclo de vida clássico de um software, 
+como mostra a figura 1 abaixo. O ciclo de vida de um software deve ser realizado 
+durante o processo desenvolvimento do mesmo.
+Figura 1 – Ciclo de Vida Clássico de um Software
+Fonte: Pressman, 2011.
+Como pode ser visto na figura 1, o ciclo de vida clássico de um software é 
+composto pelas etapas de Comunicação, Planejamento, Modelagem, Construção e 
+Emprego, onde cada uma dessas etapas é constituída por subetapas, ou seja, 
+tarefas que devem ser executadas para o sucesso de todo o processo.
+A etapa de Comunicação consiste no início do projeto, onde são levantadas 
+todas as necessidades exigidas pelo mesmo. Na etapa de Planejamento, são 
+realizadas as estimativas do projeto, é criado um cronograma das atividades a 
+serem realizadas e é definido como se dará o acompanhamento das mesmas. Na 
+7
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+etapa de Modelagem, é feita a análise e o projeto de todas as atividades a serem 
+desenvolvidas no projeto. Na etapa sequente, a etapa da Construção, são 
+codificadas todas as etapas levantadas, planejadas e modeladas, bem como são 
+feitos os testes de cada atividade implantada. Por fim, na etapa de Emprego, é 
+realizada a entrega do projeto concluído, como também todos os suportes ao cliente, 
+dando a devida atenção ao seu feedback, ou seja, ao retorno dado por ele.
+SAIBA MAIS
+O ciclo de vida clássico de um software também é conhecido na literatura como 
+Modelo Cascata e trata-se do paradigma mais antigo da Engenharia de Software.
+No que tange ao processo de Desenvolvimento de Software, existem outros 
+modelos adaptados do Modelo Cascata, sendo eles: os Modelos de Processo 
+Incremental; os Modelos de Processo Evolucionário, com os paradigmas da 
+Prototipação e o Modelo Espiral; e os Modelos Concorrentes.
+INDICAÇÃO BIBLIOGRÁFICA:
+Livro: PRESSMAN, R.S. Engenharia de Software: Uma Abordagem Profissional, 
+Porto Alegre, 2011.
+Diante da necessidade de alcançar a qualidade durante o processo de 
+desenvolvimento de um software, existe uma importante ferramenta de apoio à 
+gestão das organizações conhecida como ciclo PDCA (Plan, Do, Check, Action – em 
+português: Planejamento, Execução, Verificação, Ação Corretiva).
+Werkema define o ciclo PDCA como:
+“um método gerencial de tomada de decisões para garantir o alcance das 
+metas necessárias à sobrevivência de uma organização”(WERKEMA, 
+1995). 
+O ciclo PDCA é também conhecido como ciclo de Shewhart, seu criador na 
+década de 30, ou ciclo de Deming, seu maior divulgador, ou ainda, Ciclo da 
+Qualidade. O ciclo PDCA é composto por quatro etapas: Planejamento, Execução, 
+Verificação e Ação Corretiva. A figura 2 abaixo ilustra as etapas que compõem o 
+ciclo.
+8
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Figura 2 – Ciclo PDCA
+Fonte: Elaboração Própria, 2020.
+Na etapa de Planejamento é observado o problema a ser resolvido, são 
+estabelecidas metas e as formas de alcançá-las. Na etapa de Execução, as tarefas 
+planejadas na etapa anterior são postas em prática, ou seja, são executadas. Na 
+etapa de Verificação é realizada a comparação entre o resultado obtido e a meta 
+estabelecida. Por fim, na etapa da Ação Corretiva, as ações a serem tomadas 
+variam conforme o resultado obtido, caso a meta tenha sido alcançada, a ação será 
+de manutenção, do contrário, a ação será a tomada de medidas sobre as causas 
+que impediram o sucesso do plano.
+De um modo simples é possível relacionar o ciclo PDCA com o ciclo de vida 
+clássico de um software. A tabela 1 abaixo mostra como encaixar as etapas que 
+compõem o ciclo de vida clássico de um software nas etapas do ciclo PDCA, 
+estabelecendo essa relação.
+Tabela 1 – Ciclo PDCA versus Ciclo de Vida Clássico de um Software
+Ciclo PDCA Ciclo de vida clássico de um software
+Planejamento Comunicação, Planejamento, Modelagem
+Execução Construção (Codificação)
+Verificação Construção (Teste)
+Ação Corretiva Emprego
+Fonte: Elaboração Própria, 2020.
+Planejamento Execução
+Ação
+Corretiva
+Verificação
+9
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+IMPORTANTE!
+Quando se alinha as etapas do ciclo de vida clássico de um software com o conceito 
+expresso no ciclo PDCA, tem-se uma chance e uma garantia maior de obter a 
+qualidade durante o processo de desenvolvimento de um software.
+A avaliação da qualidade de um software deve ser realizada em dois 
+momentos: I) durante a produção desse software e II) quando o mesmo esta 
+finalizado. Esses dois momentos são chamados, respectivamente, de processo e 
+produto. 
+Durante o processo é avaliado o modo como o software está sendo 
+desenvolvido, identificando práticas que possam gerar problemas na qualidade do 
+produto e desenvolvendo e/ou utilizando métodos e ferramentas que evitem esses 
+problemas. No segundo momento, como produto concluído, procura-se avaliar a sua 
+qualidade a fim de identificar deficiências e limitações em sua aplicabilidade como 
+um produto final (SILVA, 2003).
+Ao se analisar a qualidade de um software, é observado se o mesmo satisfaz 
+as necessidades do usuário, o que, necessariamente, não corresponde a atender as 
+especificações definidas. Para um software de qualidade, atender as especificações 
+definidas é necessário, enquanto satisfazer as necessidades do usuário é essencial.
+1.3 GERÊNCIA DA QUALIDADE
+A Gerência da Qualidade é uma das etapas da Gerência de Projeto e tem por
+objetivo garantir que as exigências de um projeto sejam atendidas. 
+Segundo VASCONCELOS et al. (2006), a Gerência da Qualidade inclui os 
+seguintes processos principais:
+• Planejamento da qualidade: identifica quais padrões de qualidade são 
+relevantes para o projeto e determina a melhor forma de satisfazê-los;
+• Garantia da qualidade: avalia periodicamente o desempenho geral do 
+projeto, de forma a garantir a satisfação dos padrões relevantes de 
+qualidade; 
+10
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+• Controle da qualidade: monitora os resultados do projeto a fim de
+determinar se eles estão de acordo com os padrões de qualidade 
+aceitáveis, além de identificar formas de eliminar causas de desempenhos 
+insatisfatórios.
+A Gerência da Qualidade trata-se de uma ação contínua cuja origem está no 
+planejamento criado ao discutir como se obter a qualidade desejada. Em projetos de
+desenvolvimento de software, para que a execução do gerenciamento da qualidade 
+aconteça, é necessário o conhecimento, de forma clara, da qualidade desejada para 
+o software em questão e a descrição de como a mesma será atingida. Para o 
+gerenciamento, deve-se definir claramente o que o termo “Software de Alta
+Qualidade” significa, de fato, para o projeto. Sem essa definição clara, os
+engenheiros de software podem assumir proposições diversas e, até mesmo 
+conflitantes, a respeito dos atributos do software em construção que podem ser 
+otimizados.
+1.4 MÉTRICAS DA QUALIDADE DE SOFTWARE
+Um projeto de construção de um software consiste em uma sequência de 
+etapas onde métricas devem ser utilizadas a fim de identificar funcionalidades 
+(procedimentos) que não estejam de acordo com sua finalidade de criação.
+De modo geral, pode-se definir o conceito de métrica como uma função que 
+estabelece uma medida, ou seja, trata-se de um conjunto de regras capaz de 
+verificar a autenticidade de uma determinada função ou funcionalidade.
+De acordo com Pressman, a qualidade de um software está diretamente ligada 
+à qualidade dos requisitos que descrevem o problema, do projeto que modela a 
+solução, do código que leva ao programa executável, e dos testes que exercitam o 
+software para descobrir os erros. Por isso, deve-se usar medidas para avaliar a 
+qualidade dos requisitos e modelos de projeto, o código-fonte, e os casos de testes 
+que foram criados enquanto o software é desenvolvido. Para conseguir essa 
+avaliação, são aplicadas métricas que estimam a qualidade dos artefatos de 
+software (PRESSMAN, 2011). 
+11
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Embora muitas medidas de qualidade possam ser adotadas, uma prática 
+bastante comum a nível de projeto é a medição de erros e defeitos. Métricas 
+derivadas dessas medidas proporcionam uma indicação da efetividade da garantia 
+de qualidade de software. 
+Pressman (2011) cita quatro medidas eficazes para medir a qualidade de um 
+software. Tais medidas podem ser observadas na tabela 2 abaixo: 
+Tabela 2 – Medidas de Qualidade de Software
+Correção
+o Um programa deve operar corretamente ou terá pouca utilidade 
+para seus usuários. 
+o A correção é o grau com o qual o software executa sua função. 
+o A medida mais comum é a identificação de defeitos, onde um 
+defeito é definido como uma ocorrência de falta de conformidade 
+com os requisitos. 
+Manutenibilidade
+o A manutenibilidade é a facilidade com a qual um programa pode 
+ser corrigido se for encontrado um erro, adaptado se o ambiente 
+mudar, ou melhorado se o cliente desejar uma alteração nos 
+requisitos. 
+Integridade
+o A integridade do software vem se tornando cada vez mais 
+importante na era dos terroristas e hackers. 
+o Esse atributo mede a habilidade de um sistema em resistir aos 
+ataques (acidentais ou intencionais) à sua segurança. 
+o Para medir a integridade, deve-se atentar a dois preceitos: 
+ - Ameaça: a probabilidade de que um ataque ocorrerá em um 
+dado intervalo de tempo.
+ - Segurança: a probabilidade de que um ataque será repelido. 
+Usabilidade
+o Se um programa não for fácil de usar, muitas vezes ele está 
+destinado ao fracasso, mesmo que as funções que ele executa 
+sejam valiosas e funcionem corretamente. 
+o A usabilidade é uma tentativa de quantificar a facilidade de uso.
+Fonte: Adaptado de Pressman (2011).
+1.4.1 Categoria das Métricas
+Segundo Monge (2001), as métricas de qualidade podem ser divididas em seis 
+categorias principais: produto/processo, objetivas/subjetivas, absolutas/relativas, 
+explícitas/derivadas, dinâmicas/estáticas e preditivas/explanatórias. Estas categorias 
+estão descritas na tabela 3 abaixo: 
+12
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Tabela 3 – Categorias das Métricas de Qualidade
+Produto
+Indica características mensuráveis do produto de software tal como 
+tamanho, complexidade, etc.
+Processo
+Mede aspectos de desenvolvimento e manutenção e é,
+geralmente, usado para caracterizar os custos destas atividades.
+Objetivas
+São facilmente quantificadas e medidas através de expressões 
+numéricas ou representações gráficas, e calculadas a partir de 
+documentos de software.
+Subjetivas
+São medidas relativas, baseadas em estimativas pessoais ou de 
+grupo, sendo classificadas por termos linguísticos, por exemplo:
+alto, médio e baixo.
+Absolutas São tipicamente invariantes para a medição de novos itens.
+Relativas Variam conforme a medição de novos intens.
+Explícitas
+Também chamadas diretas, não dependem da medida de outro 
+atributo, quantificando um fator observado no produto.
+Derivadas
+Também chamadas indiretas, envolvem medidas de um ou mais 
+atributos relacionados às métricas.
+Dinâmicas Possuem uma dimensão temporal.
+Estáticas Permanecem invariáveis no que se refere ao tempo.
+Preditivas
+Também chamadas a priori, podem ser obtidas ou geradas 
+previamente, para realizar prognósticos do valor de uma 
+propriedade do sistema. Somente se tornará diretamente 
+observável em um estágio posterior a seu desenvolvimento.
+Explanatórias
+Também chamadas de resultado, descritivas ou a posteriori, são 
+geradas depois do fato ocorrido, baseadas em dados coletados, 
+indicando, simplesmente, o estado atual do produto.
+Fonte: Adaptado de Monge (2001).
+13
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+1.4.2 Características das Métricas
+Ainda de acordo com Monge (2001), uma métrica de software de qualidade é 
+dotada de certas características. Estas características estão descritas na tabela 4 a 
+seguir:
+Tabela 4 – Características de uma Métrica de Qualidade
+Objetividade Os resultados são independentes de seu medidor.
+Confiabilidade Os resultados são repetíveis e precisos.
+Validabilidade Os resultados medem as características pretendidas.
+Padronização
+A métrica não possui ambiguidades, seguindo um mesmo 
+padrão independente de quando e onde aplicada.
+Comparabilidade
+Pode ser comparada com outras medidas para os mesmos 
+critérios.
+Economia A métrica é econômica e simples em sua utilização.
+Utilidade
+A métrica deve comunicar uma necessidade e não 
+simplesmente uma medida para seu próprio fim.
+Consistência A métrica não deve combinar fatores conflitantes entre si.
+Automação
+A métrica deve ser mensurável, através de ferramentas 
+apropriadas.
+Fonte: Adaptado de Monge (2001).
+1.4.3 Aplicação de Métricas
+Para Monge, a aplicação de métricas de uma maneira organizada, alicerçada
+por uma metodologia, possui efeitos benéficos e oferece as seguintes vantagens 
+(MONGE, 2001):
+• Estabelece requisitos de qualidade para um sistema, desde o início de 
+seu desenvolvimento;
+• Define critérios de aceitação, padronização e classificação;
+• Desenvolve um plano de medidas, baseado nos requisitos estabelecidos;
+• Avalia o nível de qualidade realizado, confrontando-o com os requisitos 
+estabelecidos;
+• Controle do processo de desenvolvimento;
+14
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+• Melhora no gerenciamento do produto, oferecendo meios de serem 
+detectadas falhas ou potenciais pontos de problemas no sistema, ao 
+longo do desenvolvimento;
+• Prediz o nível de qualidade a ser obtido no futuro;
+• Permite a comparação dos atributos de qualidade de um sistema com 
+outro;
+• Quantifica as mudanças;
+• Monitora a degradação da qualidade, durante a fase de manutenção;
+• Calcula o custo do produto ao longo de seu ciclo de vida.
+1.5 GARANTIA DA QUALIDADE
+Tendo em vista um mercado altamente competitivo, a qualidade é certamente 
+um grande diferencial sendo, na maior parte dos casos, a responsável pela 
+permanência de um produto e/ou serviço no mercado. É desejo de todos fornecer e 
+receber produtos e/ou serviços de qualidade. A garantia da qualidade é fundamental 
+para qualquer negócio que gere produtos que são usados por outras pessoas.
+A garantia da qualidade, também conhecida como SQA (Software Quality
+Assurance, em português: Garantia da Qualidade de Software), consiste em um 
+conjunto de funções de auditoria e de relatórios, que possibilita uma avaliação da 
+efetividade e da totalidade das ações para o controle da qualidade. O objetivo da 
+garantia da qualidade é fornecer ao pessoal técnico e administrativo os dados 
+necessários que os informem acerca da qualidade do produto, concedendo-os, 
+portanto, o conhecimento de que as ações utilizadas para atingir a qualidade 
+desejada do produto estão funcionando. Obviamente, se os dados fornecidos pela 
+garantia da qualidade identificarem problemas, é responsabilidade do gerenciamento 
+tratá-los e aplicar os recursos necessários para resolvê-los (PRESSMAN, 2011).
+Segundo Pressman, a garantia da qualidade de software engloba um amplo 
+aspecto de atividades que se concentram em sua gestão. Estas atividades estão
+sintetizadas na tabela 5 a seguir:
+15
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Tabela 5 – Atividades de Garantia da Qualidade
+Padrões
+o Organizações de padronizações (como IEEE e ISO) produzem uma 
+ampla gama de padrões para engenharia de software, gerando seus 
+respectivos documentos. 
+o Os padrões podem ser adotados voluntariamente por uma 
+organização de engenharia de software ou impostos pelo cliente ou 
+outros interessados. 
+o O papel da SQA é garantir que padrões adotados sejam seguidos e 
+que os produtos resultantes estejam em conformidade com eles.
+Revisões e 
+Auditorias
+o Revisões técnicas são uma atividade de controle de qualidade 
+realizada por engenheiros de software, cujo intuito é revelar erros. 
+o Auditorias são um tipo de revisão efetuada pelo pessoal de SQA com 
+o intuito de assegurar-se de que as diretrizes de qualidade estejam 
+sendo seguidas no trabalho de engenharia de software. 
+Testes
+o Os testes de software são uma função de controle de qualidade, cujo 
+objetivo principal é descobrir erros. 
+o O papel da SQA é garantir que os testes sejam planejados 
+apropriadamente e conduzidos eficientemente, de modo que se 
+tenha a maior probabilidade possível de alcançar seu objetivo 
+primário.
+Coleta e Análise de 
+Erros/Defeitos
+o A SQA reúne e analisa dados de erros/defeitos para melhor 
+compreender o surgimento dos mesmos e quais atividades de 
+engenharia de software melhor se adéquam para sua eliminação.
+Gerenciamento de 
+Mudanças
+o As mudanças são um dos aspectos mais negativos de qualquer 
+projeto de software. Se não forem administradas apropriadamente, 
+podem gerar confusão, e confusão quase sempre leva a uma 
+qualidade inadequada. 
+o A SQA garante que práticas adequadas de gerenciamento de 
+mudanças tenham sido instituídas.
+Educação
+o Um fator fundamental para o aperfeiçoamento das práticas de 
+engenharia de software de uma organização é a educação dos 
+engenheiros de software, seus gerentes e outros interessados. 
+o A organização de SQA assume a liderança no processo de 
+aperfeiçoamento do software, propondo e patrocinando programas 
+educacionais.
+Gerência dos 
+Fornecedores
+o Existem três categorias de software advindas de fornecedores 
+externos: pacotes prontos, comerciais; software personalizado, que 
+fornece um esqueleto básico, personalizado de acordo com as 
+necessidades do comprador; e software sob encomenda, que é 
+16
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+projetado e construído de forma personalizada a partir de 
+especificações fornecidas pela empresa-cliente. 
+o O papel do grupo de SQA é garantir software de alta qualidade, por 
+meio da sugestão de práticas específicas de garantia da qualidade 
+que o fornecedor deve seguir, e incorporar exigências de qualidade 
+como parte de qualquer contrato com um fornecedor externo.
+Administração da 
+Segurança
+o Com o aumento dos crimes referentes à privacidade, toda 
+organização de software deve instituir políticas que protejam os 
+dados em todos os níveis, estabelecer proteção através de firewalls
+para as aplicações da Internet (Web Apps) e garantir que o software 
+não tenha sido alterado internamente sem autorização. 
+o A SQA garante o emprego de processos e tecnologias apropriadas 
+para ter a segurança de software desejada.
+Proteção
+o A SQA pode ser responsável por avaliar o impacto de falhas de 
+software e por iniciar as etapas necessárias para redução de riscos.
+Administração de 
+Riscos
+o O grupo de SQA garante que as atividades de gestão de riscos 
+sejam conduzidas apropriadamente e que planos de contingência 
+relacionados a riscos tenham sido estabelecidos.
+Fonte: Adaptado de Pressman (2011).
+1.5.1 Metas do SQA 
+Pressman (2011) determina um conjunto de metas pragmáticas a serem 
+atingidas pelo SQA. Essas metas estão descritas na tabela 6 a seguir:
+Tabela 6 – Metas do SQA
+Qualidade dos 
+Requisitos
+o A correção, a perfeição e a consistência do modelo de requisitos são 
+determinantes sobre a qualidade de todos os produtos seguintes. 
+o A SQA deve assegurar-se de que a equipe de software tenha revisto 
+apropriadamente o modelo de requisitos para a obtenção de um alto 
+nível de qualidade.
+Qualidade do 
+Projeto
+o Todo elemento do modelo de projeto deve ser avaliado pela equipe 
+de software para garantir que apresente alta qualidade e que o 
+próprio projeto esteja de acordo com os requisitos. 
+o A SQA busca atributos do projeto que sejam indicadores de 
+qualidade.
+Qualidade do 
+Código
+o O código-fonte e produtos relacionados (como informações 
+descritivas) devem estar em conformidade com os padrões locais de 
+codificação e apresentar características que irão facilitar a 
+manutenção. 
+17
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Eficácia do Controle 
+de Qualidade
+o A equipe de software deve aplicar recursos de forma a obter a maior 
+probabilidade possível de atingir um resultado de alta qualidade. 
+o A SQA analisa a alocação de recursos para revisões e realiza testes 
+para verificar se eles estão ou não sendo alocados da maneira mais 
+efetiva.
+Fonte: Adaptado de Pressman (2011).
+18
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+CAPÍTULO 2 – MODELOS E TÉCNICAS PARA AVALIAÇÃO E 
+APERFEIÇOAMENTO DOS PROCESSOS DE SOFTWARE
+Neste capítulo serão abordados modelos e normas técnicas utilizadas no 
+processo de construção e avaliação de softwares, com a finalidade de alcançar a 
+qualidade desejada no processo de desenvolvimento do software e, por 
+consequência, no produto final construído.
+2.1 CMM e CMMI
+2.1.1 CMM
+O CMM (Capability Maturity Model , em português "Modelo de Maturidade de
+Capacidade"), também conhecido como SW-CMM (Software CMM), foi criado por 
+Watts Humphrey do centro de pesquisa e desenvolvimento americano - SEI 
+(Software Engineering Institute, em português “Instituto de Engenharia de 
+Software”), no ano de 1988, com o propósito de avaliar e melhorar a capacitação 
+das empresas que produzem software. 
+O projeto CMM foi apoiado pelo Departamento de Defesa do Governo dos 
+Estados Unidos, um grande consumidor de software, que precisava de um modelo 
+formal que permitisse selecionar seus fornecedores de software de forma mais 
+eficaz. Embora não seja uma norma emitida por uma instituição internacional (como 
+a ISO ou o IEEE, por exemplo), este modelo possui uma grande aceitação mundial
+(MONGE, 2001).
+De acordo com MONGE (2001), o CMM tem como finalidade de uso:
+• Melhorar o processo de desenvolvimento de software, onde uma 
+organização planeja, desenvolve e implementa mudanças ao seu 
+processo de criação;
+• Avaliar o processo de desenvolvimento de software, onde uma equipe 
+de profissionais especializada determina o atual estado da organização 
+no processo de desenvolvimento e as prioridades entre as dificuldades
+enfrentadas pela empresa em relação a esse processo; 
+19
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+• Avaliar a capacidade dos desenvolvedores, onde uma equipe de 
+profissionais especializados identifica quais as pessoas qualificadas a 
+trabalhar no desenvolvimento do produto e monitora os níveis do 
+processo no qual a empresa se encontra.
+A figura 3 abaixo ilustra a forma como que o CMM é estruturado. Sua estrutura
+é composta por Níveis de Maturidade, cujo intuito é indicar a Capacidade de cada 
+Processo. Cada Nível de Maturidade é composto de Áreas-Chave de processo, que 
+tem por objetivo atingir as metas. Cada Área-Chave de processo é organizada em 
+seções denominadas Características Comuns, que objetivam a Implementação ou 
+Institucionalização. As Características Comuns, por sua vez, são compostas por 
+Práticas-Chave que descrevem a Infraestrutura ou as Atividades do processo. Os 
+parágrafos seguintes darão o detalhamento de cada unidade que compõe estrutura 
+do CMM.
+Figura 3 – Estrutura Geral do CMM
+Fonte: Elaboração Própria, 2020.
+Níveis de 
+Maturidade
+Áreas-Chave
+Características
+Comuns
+Práticas-Chave
+Capacidade 
+do Processo
+Objetivos
+Implementação ou 
+Institucionalização
+Infraestrutura
+ou Atividades
+contêm
+contêm
+Organizados por
+indicam
+atingem
+objetivam
+descrevem
+20
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+A tabela 7 a seguir descreve, de forma resumida, as etapas que compõem a 
+estrutura do CMM.
+Tabela 7 – Etapas do CMM
+Níveis de 
+Maturidade
+Descrevem um processo evolutivo bem definido, a fim de
+alcançar um processo de software maduro. 
+Capacidade do 
+Processo
+Descreve os resultados esperados que podem ser alcançados,
+seguindo um processo de software, além de fornecer
+estimativas de resultados para o próximo projeto de software da 
+organização empreendedora.
+Áreas-Chave de 
+Processo
+Identificam um grupo de atividades relacionadas que, quando 
+executadas, simultaneamente, alcançam objetivos considerados 
+importantes para estabelecer a capacidade de processo do nível 
+de maturidade relacionado. 
+Objetivos
+Resumem as práticas-chave de uma área-chave de processo e 
+podem ser usados para determinar se uma organização ou 
+projeto implementou a área-chave de processo de forma efetiva. 
+Os objetivos significam o âmbito, os limites, e a intenção de 
+cada área-chave de processo.
+Características 
+Comuns
+Atributos que indicam se a implementação de uma área-chave 
+de processo é efetiva, repetível e duradoura. 
+Práticas-Chave
+Descrevem a estrutura e as atividades que mais contribuem 
+para implementação efetiva e o estabelecimento da área-chave 
+de processo.
+Fonte: Adaptado de Monge (2001).
+As seções a seguir detalharão cada uma dessas etapas.
+2.1.1.1 Níveis de Maturidade do CMM
+O CMM possui cinco níveis de maturidade, sendo eles: Inicial, Repetível, 
+Definido, Gerenciado e Otimizado. A tabela 8 a seguir descreve as ações de cada 
+nível.
+21
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Tabela 8 – Níveis de Maturidade do CMM
+1- Inicial
+o No nível Inicial, o processo de desenvolvimento é 
+desorganizado e até caótico e poucos processos são definidos.
+o O processo de software modifica-se constantemente de acordo 
+com o progresso do trabalho. 
+o Tempo, orçamentos, funcionalidade e qualidade do produto são 
+geralmente impossíveis de prever.
+2- Repetível
+o No nível Repetível os processos básicos de gerenciamento de 
+projetos estão estabelecidos e permitem acompanhar custo, 
+cronograma e funcionalidade. 
+o São estabelecidas políticas para administrar um projeto de 
+software e procedimentos para implementá-las. 
+o Um processo pode ser documentado, treinado, medido, e 
+melhorado.
+o A capacidade de processo de software nesse nível pode ser 
+resumida como disciplinada, uma vez que o planejamento e a 
+trajetória do projeto de software são estáveis e sucessos 
+anteriores podem ser repetidos.
+3- Definido
+o No nível Definido, tanto as atividades de gerenciamento, quanto 
+as de desenvolvimento de software estão documentadas e 
+padronizadas. 
+o Todos os projetos utilizam uma versão aprovada e adaptada do 
+processo padrão de desenvolvimento de software da 
+organização.
+o A engenharia e a manutenção do software formam um processo 
+padrão documentado, padronizado e integrado coerentemente, 
+o que leva a melhoria nas práticas de engenharia de software 
+da organização.
+o Devido ao processo de software ser bem definido, o 
+gerenciamento tem uma boa perspicácia em relação ao 
+progresso técnico de todos os projetos. 
+o A capacidade de processo de software nesse nível pode ser 
+resumida como padrão e consistente, porque tanto o 
+gerenciamento das atividades, quanto a engenharia de software 
+são estáveis e repetíveis.
+o Como o custo, o tempo e a funcionalidade dos produtos estão 
+sob controle, a qualidade de software é mantida. 
+o Há um conhecimento pleno das atividades da organização.
+22
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+4- Gerenciado
+o No nível Gerenciado, são coletadas medidas detalhadas da 
+qualidade do produto e do processo de desenvolvimento de 
+software. 
+o Tanto o produto, quanto o processo de desenvolvimento são 
+entendidos e controlados quantitativamente. 
+o A organização estabelece metas de qualidade quantitativas 
+para produtos de software e processos.
+o Utiliza-se um banco de dados para coletar e analisar os dados 
+disponíveis dos processos de software definidos. 
+o Os projetos alcançam o controle sob os produtos e processos 
+estreitando a variação no desempenho do processo, a fim de se 
+encaixarem dentro dos limites quantitativos aceitáveis. 
+o Os riscos envolvidos promovendo a curva de aprendizagem de 
+um domínio de aplicação novo são conhecidos e 
+cuidadosamente administrados. 
+o A capacidade de processo de software de organizações nesse 
+nível pode ser resumida como previsível, porque mede-se o 
+processo e opera-se dentro de limites mensuráveis. 
+o Este nível de capacidade de processo permite a uma 
+organização predizer tendências de processo e qualidade de 
+produto dentro dos saltos quantitativos destes limites. Ao 
+exceder esses limites, ações de correção são executadas. 
+o Ao final, obtêm-se produtos de software de alta qualidade e 
+previsíveis.
+5- Otimizado
+o No nível Otimizado, o melhoramento contínuo de um processo é 
+alcançado por meio de retornos quantitativos dos processos e 
+pelo uso pioneiro de ideais e tecnologias inovadoras.
+o A organização tem como função identificar fraquezas e 
+fortalecer o processo, com o objetivo de prevenir a ocorrência 
+de defeitos. 
+o Identificam-se inovações que exploram as melhores práticas de 
+engenharia software, difundindo-as para o resto da organização. 
+o Os times de projeto de software nesse nível analisam defeitos 
+para determinar suas possíveis causas. 
+o Avaliam-se os processos de software para prevenir a ocorrência 
+de tipos conhecidos de defeitos, e lições aprendidas são 
+disseminadas para outros projetos.
+Fonte: Adaptado de Monge (2001).
+23
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+2.1.1.2 Áreas-Chave de Processo do CMM
+Todos os níveis de maturidade do CMM, exceto o nível Inicial, são compostos 
+por áreas-chave de processo. Cada área-chave constitui em um conjunto de 
+atividades que quando realizadas, simultaneamente, têm por finalidade atingir
+determinados objetivos. Monge (2001) descreve as áreas-chave (enumeradas por 
+letras) de cada nível de maturidade e seus respectivos objetivos como sendo:
+1) Nível Inicial
+2) Nível Repetível
+a. Gerenciamento de Requisitos
+• Os requisitos do sistema definidos para o software são controlados de 
+forma a estabelecer um perfil mínimo a ser utilizado.
+b. Planejamento do Projeto
+• Um prognóstico em relação ao software é realizado e documentado para 
+uso no planejamento e acompanhamento do projeto do software. As 
+atividades de projeto de software são planejadas e documentadas. 
+c. Visão Geral e Acompanhamento do Projeto
+• Resultados já existentes são acompanhados de acordo com o 
+planejamento do software. Quando esses resultados apresentam um 
+desvio significativo em relação ao que foi planejado, ações corretivas são 
+tomadas e acompanhadas até o final do projeto.
+d. Gerenciamento de Subcontratados
+• O contratante seleciona subcontratados qualificados e ambos acordam os 
+compromissos assumidos um com o outro. O contratante acompanha os 
+resultados do subcontratado de acordo com os compromissos assumidos.
+e. Garantia da Qualidade do Software
+• As atividades de garantia de qualidade de software são planejadas. A 
+conformidade dos produtos de software e atividades, como procedimentos 
+e requisitos, são verificadas. 
+f. Gerenciamento de Configuração
+• As atividades de gerenciamento de configuração são planejadas. Os 
+produtos de trabalho do software são identificados e controlados. 
+24
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+3) Nível Definido
+a. Foco do Processo Organizacional
+• São coordenadas atividades de desenvolvimento e melhoria do processo 
+de software em toda a organização. São identificados os pontos fortes e 
+fracos do processo de desenvolvimento, de acordo com um padrão de 
+processo. São planejadas atividades de desenvolvimento e melhoria do 
+processo a nível organizacional.
+b. Definição do Processo Organizacional
+• O processo padrão de desenvolvimento de software da organização é 
+desenvolvido e mantido. Informações relativas ao uso desse processo 
+padrão são coletadas, revisadas e disponibilizadas.
+c. Programa de Treinamento
+• As atividades de treinamento são planejadas e fornecidas com o intuito de
+desenvolver habilidades e prover os conhecimentos necessários para 
+realizar o gerenciamento do software e as funções técnicas. 
+d. Gerenciamento de Software Integrado
+• O processo de software definido para o projeto é uma versão adaptada do 
+processo padrão de desenvolvimento de software da organização. O
+projeto é planejado e gerenciado de acordo com o processo de 
+desenvolvimento de software definido para o projeto em específico.
+e. Engenharia de Produto de Software
+• As atividades de engenharia de software são definidas, integradas e 
+realizadas de forma consistente para produzir o software, mantendo os 
+produtos de trabalho do software consistentes entre si.
+f. Coordenação Intergrupos
+• Os grupos de engenharia identificam, acompanham e resolvem todas as 
+questões entre os grupos da organização.
+g. Revisão Conjunta
+• Atividades de revisão conjunta são planejadas, de modo a identificar e 
+remover os defeitos nos produtos de trabalho.
+25
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+4) Nível Gerenciado
+a. Gerenciamento Quantitativo dos Processos
+• As atividades de gerenciamento quantitativo dos processos são 
+planejadas. O desempenho do processo de desenvolvimento de software 
+definido para o projeto é controlado quantitativamente. A capacidade do 
+processo de desenvolvimento de software padrão da organização é 
+conhecida em termos quantitativos.
+b. Gerenciamento da Qualidade de Software
+• As atividades de gerenciamento da qualidade de software do projeto são 
+planejadas. São mensurados os objetivos de qualidade do produto de 
+software e suas prioridades são definidas. O progresso real em direção à 
+realização dos objetivos de qualidade do produto de software é 
+quantificado e gerenciado.
+5) Nível Otimizado
+a. Prevenção de Defeitos
+• As atividades de prevenção de defeitos são planejadas. As causas 
+comuns de defeitos são procuradas e identificadas para serem então
+eliminadas.
+b. Gerenciamento de Mudanças Tecnológicas
+• A incorporação de mudanças tecnológicas é planejada. Novas tecnologias 
+são avaliadas para determinar seu efeito na qualidade e na produtividade , 
+bem como na prática normal de toda a organização.
+c. Gerenciamento de Mudanças no Processo
+• A melhoria contínua do processo é planejada. O padrão de processo de 
+software da organização e os processos de software definidos de cada 
+projeto são melhorados continuamente.
+2.1.1.3 Características Comuns e Práticas-Chave do CMM
+As áreas-chave de cada nível de maturidade são organizadas em 
+Características Comuns, que consistem em itens a serem observados, cujo objetivo 
+é verificar a implementação e institucionalização de sua área-chave correspondente. 
+26
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+O objetivo das Características Comuns é identificar se sua área-chave de processo 
+correspondente é eficiente, repetível e duradoura. 
+Cada característica comum, por sua vez, contém Práticas-Chave a serem 
+realizadas. As Práticas-Chave descrevem as atividades a serem realizadas com a 
+finalidade de atingir os objetivos de cada área-chave do processo. São descritas, em 
+geral, com frases simples seguidas de descrições detalhadas (conhecidas como 
+subpráticas). As práticas-chave devem descrever "o que" deve ser feito e não 
+"como" os objetivos devem ser atingidos (MONGE, 2001). 
+A tabela 9 a seguir descreve as Características Comuns do CMM e as PráticasChave relacionadas a cada uma delas.
+Tabela 9– Características Comuns e Práticas-Chave do CMM
+Características 
+Comuns
+Descrição Práticas-Chave relacionadas
+Compromisso de 
+Realizar
+Atitudes a serem tomadas pela 
+organização a fim de garantir que o 
+processo se estabeleça e seja 
+duradouro.
+Estabelecimento de políticas e 
+escolha de um gerente experiente.
+Capacidade de 
+Realizar
+Pré-requisitos que devem existir no 
+projeto ou na organização para 
+implementar o processo de forma 
+competente.
+Alocação de recursos, definição da 
+estrutura organizacional e de 
+treinamento.
+Atividades 
+Realizadas
+Papéis e procedimentos necessários 
+para implementar uma área-chave de 
+processo.
+Estabelecimento de planos e 
+procedimentos, realização e 
+acompanhamento do trabalho, e 
+tomada de ações corretivas, quando 
+necessário.
+Medições e Análise
+Necessidade de medir o processo e 
+analisar as medições obtidas.
+Realização de medições para 
+determinar o estado e a efetividade 
+das atividades realizadas.
+Implementação com 
+Verificação
+Passos para garantir que as atividades 
+são realizadas de acordo com o 
+processo estabelecido.
+Revisão, auditoria e garantia de 
+qualidade.
+Fonte: Adaptado de Monge (2001).
+27
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+2.1.2 CMMI
+O Modelo CMMI (Capability Maturity Model Integration, em português “Modelo 
+de Maturidade de Capacidade Integrado”) também foi desenvolvido pelo Instituto de 
+Engenharia de Software (SEI) e trata-se de uma evolução do CMM. O objetivo maior 
+do CMMI consiste em suprir as limitações de integração do CMM de forma a eliminar 
+suas inconsistências e reduzir os custos de treinamento nas implantações de 
+melhorias. 
+Esta redução de custos é obtida por meio de, além da eliminação de 
+inconsistências, redução de duplicações, melhoria da clareza e entendimento, 
+utilização de uma terminologia comum e um estilo consistente, regras de construção 
+uniforme, manutenção de componentes comuns e garantia da consistência com a 
+norma ISO15504 (VASCONCELOS et al., 2006).
+A principal mudança do CMM para o CMMI é a possibilidade de utilizar duas 
+abordagens distintas para a melhoria do processo. Essas abordagens são 
+conhecidas como Representação Contínua e Representação por Estágio. Suas 
+diferenças são apenas organizacionais, uma vez que o conteúdo é equivalente
+principalmente no que diz respeito aos Níveis de 2 a 5. 
+Na Representação Contínua os componentes principais são as áreas de 
+processo, de modo a oferecer flexibilidade para implementações de melhorias em 
+pontos específicos do processo. 
+Nesta representação, as áreas do processo são agrupadas em seis níveis de 
+maturidade como descreve Sousa (2006): 
+• Nível 0 – Incompleto: Os processos são incompletos e não obedecem as 
+práticas específicas e genéricas para alcançar o próximo nível de 
+maturidade;
+• Nível 1 – Executado: Nesse nível um desempenho estável ainda não é 
+garantido e objetivos específicos, como qualidade, custos e cronograma, 
+muitas vezes não são alcançados. Trata-se apenas do começo, o primeiro 
+passo em direção à melhoria de processos. Significa que algo está sendo 
+feito, mas não se pode ainda provar seus benefícios;
+• Nível 2 – Gerenciado: Nesse nível um processo é planejado, executado, 
+monitorado e controlado de forma isolada ou em grupo, a fim de ser 
+28
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+considerado gerenciado. Objetivos em relação a custos, cronograma e 
+qualidade, são atingidos e já existe gerenciamento ativo na organização 
+incluindo coleta de métricas;
+• Nível 3 – Definido: Um processo dito como definido é um processo 
+gerenciado que foi adaptado de processos padrões da organização. 
+Ações que não estão determinadas no processo já definido devem ser 
+documentadas, justificadas, revisadas e aprovadas;
+• Nível 4 – Gerenciado quantitativamente: Os processos já definidos são 
+controlados, usando estatística e outras técnicas quantitativas. Nesse 
+nível, o foco é estabelecer linhas de base (baselines), modelos e medidas 
+de desempenho;
+• Nível 5 – Otimizado: Os processos são alterados e adaptados para 
+atender os objetivos de negócio atuais e projetados. Um processo 
+otimizado é um processo já gerenciado quantitativamente que é
+aperfeiçoado continuamente. Tanto o conjunto de processos padrões e os
+processos definidos são alvos de melhorias.
+o O Nível 5 está voltado para o estudo dos resultados do desempenho 
+da organização, identificando causas comuns de problemas no uso dos 
+processos e consertando-os por meio de medidas como atualização de 
+documentações e treinamento de pessoal.
+A Representação por Estágio utiliza uma abordagem estruturada e 
+sistemática, de modo que se melhore um estágio por vez. Seu foco está na 
+organização fornecendo um caminho evolutivo para a melhoria do processo. Sendo 
+assim, atingir um estágio significa que a estrutura dos estágios anteriores estão 
+corretas.
+Nesta representação, as áreas do processo são agrupadas em níveis de 
+maturidade, que devem ser atendidos por completo. Cada um desses níveis possui 
+várias áreas de processo que, por sua vez, possuem objetivos e práticas genéricas e 
+específicas. Assim, na Representação por Estágio, quando uma organização atinge 
+as práticas necessárias para estar em um nível, significa que já atingiu todos os 
+requisitos exigidos pelos níveis anteriores.
+29
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Sousa (2006) define os níveis de maturidade da Representação por Estágio 
+como sendo: 
+• Nível 1 – Inicial: A organização não possui em prática processos 
+estruturados. A atividade de desenvolvimento é caótica, o orçamento e 
+cronograma são geralmente excedidos e a qualidade dos produtos não 
+pode ser prevista.
+• Nível 2 – Gerenciado: Tem-se início de práticas básicas de 
+gerenciamento e são adotadas medidas como: aderência a políticas 
+organizacionais, acompanhamento de um plano documentado e descrição 
+de processos, aplicação adequada de fundos e recursos, atribuição de 
+responsabilidades e autoridades, treinamento de pessoal, monitoramento 
+e controle do desempenho nos processos com tomada de ações 
+corretivas quando necessário, revisões objetivas dos processos, produtos 
+de trabalho, serviços e atividades;
+• Nível 3 – Definido: A institucionalização desse nível é atingida pela 
+descrição de processos definidos, estabelecimento de um plano com base 
+na descrição desses processos, execução do processo de acordo com o 
+planejado, coleção dos produtos de trabalho, indicadores e informações 
+para melhoria da execução do processo e melhoria dos ativos 
+organizacionais;
+o Uma importante distinção entre os Níveis 2 e 3 é que no Nível 3 os 
+processos são descritos com mais detalhe e rigor que no Nível 2. No 
+Nível 3, os processos são gerenciados proativamente, baseado no 
+melhor entendimento das inter-relações e indicadores dos processos, e 
+pode se perceber uma identidade organizacional desenvolvida.
+• Nível 4 – Quantitativamente Gerenciado: A institucionalização desse 
+nível é atingida pelo estabelecimento e manutenibilidade dos objetivos 
+quantitativos para o desempenho de processos e qualidade de produtos e 
+serviços, dos processos estatisticamente estáveis e previsíveis e de um 
+entendimento quantitativo para determinar se o processo é capaz de 
+alcançar seus objetivos;
+30
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+• Nível 5 – Otimizado: A institucionalização desse nível é atingida pelo 
+estabelecimento e manutenibilidade dos objetivos quantitativos de 
+melhoria contínua de processos e da identificação de causas comuns de 
+defeitos.
+o O Nível 5 é considerado o mais alto estágio que a organização pode 
+alcançar quanto a seus processos. Nele todos os membros da equipe 
+são produtivos, os defeitos são minimizados e os produtos são 
+entregues dentro do prazo e custos estimados.
+A abordagem de Representação por Estágio é a mais aceita atualmente, sendo 
+mais comumente utilizada. A Representação Contínua foca em categorias 
+específicas, sendo mais utilizada por organizações que trabalham em um ramo 
+específico da produção de software, uma vez que podem se concentrar somente na 
+melhoria das áreas de processos de seu interesse (por exemplo, uma organização 
+que trabalha diretamente apenas com verificação e validação de software). 
+Por focar em áreas específicas, a Representação Contínua requer um 
+entendimento maior de melhoria de processos. Já a Representação por Estágio, por 
+trabalhar com um todo, é a melhor alternativa para organizações inexperientes que 
+desejam iniciar o processo de melhoria de software em busca de se atingir sua 
+qualidade. 
+2.2 NORMAS ISO 12207 E ISO 15504
+2.2.1 Norma ISO 12207
+A Norma ISO (International Organization of Standardization, em português 
+Organização Internacional para Padronização) 12207 foi criada em agosto de 1995 e 
+tem por finalidade especificar os Processos do Ciclo de Vida do Software. O 
+documento padroniza a arquitetura do ciclo de vida do software e detalha os 
+processos envolvidos no mesmo. Na norma, esses processos estão divididos em 
+três grupos: Processos Fundamentais, cujo foco está no desenvolvimento do 
+produto; Processos de Apoio, cujo focado está em auxiliar a outras atividades; e 
+Processos Organizacionais, cujo foco está em garantir e melhorar os processos. A 
+31
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+tabela 10 a seguir mostra cada um desses grupos, bem como os subprocessos 
+pertencentes a eles.
+Tabela 10 – Processos de Ciclo de Vida do Software conforme a ISO 12207
+Processos 
+Fundamentais
+Início e execução do desenvolvimento, operação e manutenção do software 
+durante o seu ciclo de vida.
+Aquisição
+Atividades de quem adquire um software, ou seja, do consumidor de 
+software. Inclui: definição da necessidade de adquirir um software (produto 
+ou serviço), pedido de proposta, seleção de fornecedor, gerência da 
+aquisição e aceitação do software. 
+Fornecimento
+Atividades do fornecedor de software. Inclui preparar uma proposta, 
+assinatura de contrato, determinação dos recursos necessários, planos de 
+projeto e entrega do software. 
+Desenvolvimento
+Atividades do desenvolvedor de software. Inclui: análise de requisitos, 
+projeto, codificação, integração, testes, instalação e aceitação do software. 
+Operação
+Atividades do operador do software. Inclui: operação do software e suporte 
+operacional aos usuários.
+Manutenção Atividades de quem faz a manutenção do software.
+Processos de Apoio Auxiliam um outro processo. 
+Documentação
+Registro de informações produzidas por um processo ou atividade. Inclui 
+planejamento, projeto, desenvolvimento, produção, edição, distribuição e 
+manutenção dos documentos necessários.
+Gerência de 
+Configuração
+Identificação e controle dos itens do software. Inclui: controle de 
+armazenamento, liberações, manipulação, distribuição e modificação de cada 
+um dos itens que compõem o software. 
+Garantia da 
+Qualidade
+Garante que os processos e produtos de software estejam em conformidade 
+com os requisitos e os planos estabelecidos.
+Verificação
+Determina se os produtos de software de uma atividade atendem 
+completamente aos requisitos ou condições impostas a eles.
+Validação
+Determina se os requisitos e o produto final (sistema ou software) atendem 
+ao uso específico proposto. 
+Revisão Conjunta
+Define as atividades para avaliar a situação e produtos de uma atividade de 
+um projeto.
+Auditoria Determina adequação aos requisitos, planos e contrato.
+Resolução de 
+Produtos
+Analisa e soluciona problemas de qualquer natureza ou fonte, descobertos 
+durante a execução do desenvolvimento, operação, manutenção ou outros 
+processos. 
+32
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Processos 
+Organizacionais
+Implementam uma estrutura a fim de melhorar continuamente os processos. 
+Gerência Gerenciamento de processos.
+Infraestrutura
+Fornecimento de recursos para os processos. Inclui: hardware, software, 
+ferramentas, técnicas, padrões de desenvolvimento, operação ou 
+manutenção. 
+Melhoria
+Atividades para estabelecer, avaliar, medir, controlar e melhorar um processo 
+de ciclo de vida de software. 
+Treinamento Atividades para prover e manter o treinamento da equipe.
+Fonte: Adaptado de Monge (2001).
+2.2.2 Norma ISO 15504
+A ISO 15504 consiste em um padrão para avaliar o processo de construção de 
+um software, com o intuito de capacitar uma organização, orientando-a a uma 
+melhoria contínua de seu processo produtivo, de modo a cumprir todos os aspectos 
+da Qualidade do Processo de Software. A norma possui um modelo de referência 
+que consiste em um conjunto de processos fundamentais que servem de base para 
+o processo de avaliação. Esse modelo organiza e classifica suas práticas em duas 
+dimensões: Categorias de Processo e Níveis de Capacidade.
+As Categorias de Processo estão divididas em cinco grupos. São eles: ClienteFornecedor, Engenharia, Suporte, Gerência e Organização. 
+A tabela 11 a seguir descreve cada uma das categorias de processo, e suas 
+divisões/ações.
+Tabela 11 – Categorias de Processo da ISO 15504
+CUS – ClienteFornecedor
+Processos que tratam diretamente dos produtos e serviços de software do 
+fornecedor para o cliente. Tem um impacto direto sobre os consumidores, 
+relaciona o levantamento de requisitos e os processos ligados à operação e 
+ao uso do produto ou serviço fornecido.
+CUS.1 Adquirir o Software.
+CUS.2 Gerenciar as necessidades do cliente.
+CUS.3 Fornecer o Software.
+CUS.4 Operar o Software.
+CUS.5 Prover o serviço ao cliente.
+ENG - Engenharia
+Processos que especificam, implementam ou mantêm um sistema ou produto 
+de software, através da análise de requisitos, projeto de arquitetura, 
+construção, integração, testes e documentação.
+33
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+ENG.1 Desenvolver os requisitos e o projeto do sistema.
+ENG.2 Desenvolver os requisitos de software.
+ENG.3 Desenvolver o projeto do software.
+ENG.4 Implementar o projeto do software.
+ENG.5 Integrar e testar o software.
+ENG.6 Integrar e testar o sistema.
+ENG.7 Manter o sistema e o software.
+SUP - Suporte
+Processos que podem ser empregados por qualquer um dos outros 
+processos. Seus processos dão suporte e apoio aos demais processos da 
+organização.
+SUP.1 Desenvolver a documentação.
+SUP.2 Desempenhar a gerência de configuração.
+SUP.3 Executar a garantia da qualidade.
+SUP.4 Executar a verificação dos produtos de trabalho.
+SUP.5 Executar a validação dos produtos de trabalho.
+SUP.6 Executar as revisões conjuntas.
+SUP.7 Executar as auditorias.
+SUP.8 Executar a resolução de problemas.
+MAN - Gerência
+Processos que contêm práticas de natureza genérica, que podem ser usadas 
+por quem gerencia projetos ou processos dentro de um ciclo de vida de 
+software. 
+MAN.1 Gerenciar o projeto.
+MAN.2 Gerenciar a qualidade.
+MAN.3 Gerenciar os riscos.
+MAN.4 Gerenciar os subcontratantes.
+ORG - Organização
+Processos que estabelecem os objetivos de negócios da organização. Inclui 
+todos os processos organizacionais da empresa como infraestrutura, 
+gerência de recursos humanos e treinamentos.
+ORG.1 Construir o negócio.
+ORG.2 Definir o processo.
+ORG.3 Melhorar o processo.
+ORG.4 Prover os recursos de treinamento.
+ORG.5 Prover a infraestrutura organizacional.
+Fonte: Adaptado de Monge (2001).
+Cada Categoria de Processo pode ser classificada em seis diferentes Níveis de 
+Capacidade. Os Níveis de Capacidade atuam como uma métrica para avaliar como 
+uma organização está realizando um determinado processo, servindo como um guia 
+34
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+para sua melhoria. São eles: Incompleto, Executado, Gerenciado, Estabelecido, 
+Previsível e Otimizado, como mostra a tabela 12 a seguir. 
+Tabela 12 – Níveis de Capacidade da ISO 15504
+Nível Nome Descrição
+0 Incompleto
+O processo falha ao atingir seus objetivos. Não existem produtos de 
+trabalho, nem saídas do processo facilmente identificáveis.
+1 Realizado
+O objetivo do processo em geral é atingido, embora, não 
+necessariamente, de forma planejada e controlada. 
+2 Gerenciado
+O processo produz os produtos de trabalho com qualidade aceitável e 
+dentro do prazo, feito de forma planejada e controlada. Os produtos 
+de trabalho estão de acordo com padrões e requisitos.
+3 Estabelecido
+O processo é realizado e gerenciado usando um processo definido, 
+baseado em princípios de Engenharia de Software. 
+4 Previsível
+O processo é realizado de forma consistente, dentro dos limites de 
+controle, para atingir os objetivos. Medidas da realização do processo 
+são coletadas e analisadas. Isto leva a um entendimento quantitativo 
+da capacitação do processo a uma habilidade de predizer a 
+realização.
+5 Otimizado
+A realização do processo é otimizada para atender as necessidades 
+atuais e futuras do negócio. O processo atinge seus objetivos de 
+negócio e consegue ser repetido. São estabelecidos objetivos 
+quantitativos de eficácia e eficiência para o processo, segundo os 
+objetivos da organização. A monitoração constante do processo, 
+segundo estes objetivos, é conseguida obtendo feedback (retorno) 
+quantitativo e a melhoria é obtida pela análise dos resultados. A 
+otimização do processo envolve o uso piloto de ideias e tecnologias 
+inovadoras.
+Fonte: Adaptado de Monge (2001).
+2.3 MPS.BR
+O Modelo MPS.BR (Melhoria de Processo do Software Brasileiro) tem como 
+objetivo atender micros, pequenas e médias empresas de software brasileiras, com 
+custo reduzido de certificação, coma finalidade de suprir suas necessidades e 
+proporcionar um reconhecimento nacional e internacional como modelo de 
+desenvolvimento de software (MACIEL et al., 2011). O Modelo foi desenvolvido pela 
+35
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+SOFTEX (Associação para Promoção da Excelência do Software Brasileiro) em 
+dezembro de 2003.
+O MPS.BR é o modelo que melhor se enquadra no perfil de produção de 
+software do mercado brasileiro e tem como base o modelo CMMI e as normas ISO 
+12207 e ISO 15504. Sua estrutura é dividida em três partes: MR-MPS, MA-MPS e 
+MN-MPS.
+O MR-MPS (Modelo de Referência para Melhoria do Processo de Software) 
+define os níveis de maturidade. Esses níveis consistem em uma combinação entre
+os processos e a sua capacidade (SOFTEX, 2012).
+Em cada nível de maturidade são analisados os processos fundamentais, 
+sendo eles: aquisição, gerência e desenvolvimentos de requisitos, solução técnica, 
+integração, instalação e liberação do produto. São analisados ainda os processos de 
+apoio, sendo eles: garantia da qualidade, gerência de configuração, validação, 
+medição, verificação e treinamento. E, por fim, os processos organizacionais, sendo 
+eles: gerência de projeto, adaptação do processo para gerência de projetos, análise 
+de decisão e resolução, gerência de riscos, avaliação e melhoria do processo 
+organizacional, definição do processo, desempenho, gerência quantitativa, análise e 
+resolução de causas, inovação e implantação na organização (MACIEL et al., 2011). 
+O MR-MPS estabelece sete níveis de maturidade, conforme ilustra a figura 4. 
+São eles: 
+• A - Em Otimização: Possui todos os processos dos níveis anteriores (B, 
+C, D, E, F, G). Esse nível tem como preocupação a inovação na área do 
+desenvolvimento dos projetos e no projeto em si, preocupando-se 
+também com questões como análise de causas.
+• B - Gerenciado Quantitativamente: Possui todos os processos dos 
+níveis anteriores (C, D, E, F, G).Esse nível é voltado para gerência dos 
+processos e a gerência quantitativa dos mesmos.
+• C - Definido: Possui todos os processos dos níveis anteriores (D, E, F, 
+G). Esse nível é voltado para gerência de riscos.
+• D - Largamente Definido: Possui todos os processos dos níveis
+anteriores (E, F, G). Esse nível é focado na verificação, validação, 
+liberação, instalação e integração dos produtos.
+36
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+• E - Parcialmente Definido: Possui todos os processos dos níveis
+anteriores (F, G). Esse nível é voltado para melhoria e controle do 
+processo organizacional.
+• F - Gerenciado: Possui todos os processos do nível anterior (G). Nesse 
+nível devem ser realizados controles de medição, gerência de 
+configuração, conceitos sobre aquisição e garantia de qualidade para que, 
+assim, o processo passe a ser gerenciado.
+• G - Parcialmente Gerenciado: Início do gerenciamento dos requisitos e 
+de projetos. 
+Figura 4 – Níveis de Maturidade do MR-MPS.
+Fonte: ASR Consultoria, 2020.
+A escala de maturidade se inicia no nível G e progride até o nível A. Para cada 
+um destes níveis de maturidade é atribuído um perfil de processos que indicam onde 
+a organização deve colocar o esforço de melhoria. O progresso e o alcance de um 
+determinado nível de maturidade do MR-MPS são obtidos quando são atendidos os 
+propósitos e os resultados esperados desses processos e seus atributos, conforme
+estabelecidos para aquele nível de maturidade (SOFTEX, 2012). 
+O MA-MPS (Método de Avaliação para Melhoria do Processo de Software) tem 
+o objetivo de orientar a realização de avaliações, uma vez que contém requisitos 
+para os avaliadores e para averiguar a conformidade ao modelo definido pelo MRMPS (MACIEL et al., 2011). 
+37
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Por fim, o MN-MPS (Modelo de Negócio para Melhoria do Processo de 
+Software) tem por finalidade descrever regras de negócio para Implementação e 
+Avaliação do MPS.BR, através da organização de grupos de empresas para 
+implementação e avaliação, certificação de consultores de aquisição e programas 
+anuais de treinamento por meio de cursos e workshops (MACIEL et al., 2011).
+SAIBA MAIS
+Os modelos MPS.BR são compatíveis com os padrões de qualidade aceitos 
+internacionalmente. É adequado ao perfil de empresas de diferentes tamanhos e 
+características, sendo elas: pequenas, médias ou grandes; públicas e/ou privadas.
+CONHEÇA OS MODELOS DE REFERÊNCIA DO MPS.BR:
+MPS-SW: Software
+MPS-SV: Serviços
+MPS-RH: Gestão de Pessoas
+Visite e saiba mais no site:
+Site: https://softex.br/mpsbr/
+2.4 COMPARATIVO ENTRE OS MODELOS CMM/CMMI, NORMAS 
+ISO12207/15504 E MPS.BR
+A tabela 13 a seguir traz um comparativo entre os modelos e normas vistos 
+neste capítulo, considerando-se itens como: Objetivo, Abordagem, Órgão de 
+Certificação, Tipo de Empresa, Custo, Versão de Utilização, Vantagens e 
+Desvantagens.
+Tabela 13 – Comparativo entre os modelos e normas apresentados
+Itens Avaliados CMM/CMMI ISO 12207 ISO 15504 MPS.BR
+Objetivo
+Propor para as 
+organizações uma 
+evolução através 
+de níveis de 
+maturidade de 
+capacitação.
+Estabelecer uma 
+estrutura para os 
+processos de ciclo de 
+vida e de 
+desenvolvimento de 
+software.
+Melhorar a 
+avaliação dos 
+processos de 
+software, se 
+tornando um 
+modelo de 
+referência.
+Atender as micros, 
+pequenas e médias 
+empresas de 
+software brasileiras 
+com custo de 
+certificação 
+reduzido.
+38
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Abordagem
+Avaliação dos 
+processos e 
+enquadramento da 
+organização em um 
+dos níveis de 
+maturidade.
+Definição dos 
+processos para 
+aquisição, 
+fornecimento, 
+desenvolvimento, 
+operação e 
+manutenção de 
+software.
+Avaliação dos 
+processos da 
+organização em 
+relação a níveis 
+de capacitação.
+Possibilita 
+implementação 
+mais gradual 
+chegando a um 
+nível inicial de 
+maturidade e 
+capacidade.
+Órgão de 
+Certificação
+SEI ISO/IEC ISO/IEC SOFTEX
+Tipo de Empresa
+Organizações em 
+geral.
+Organizações em 
+geral.
+Organizações em 
+geral.
+Micros, Pequenas e 
+Médias.
+Custo Alto Alto Alto Baixo
+Versão de 
+Utilização
+Inglês e Português Inglês e Português
+Inglês e 
+Português
+Português
+Vantagens
+Práticas de 
+processos 
+maduros, melhoria 
+de processos, 
+análise de riscos 
+ao implantar, 
+certificação, níveis 
+de maturidade.
+Define uma estrutura 
+para os processos de 
+ciclo de vida do 
+software, podendo 
+ser adaptado a 
+qualquer empresa.
+Classifica as 
+melhores práticas 
+de melhoria e 
+avaliação dos 
+processos.
+Modelo de 
+processo rápido de 
+ser adquirido, 
+adequado à 
+realidade brasileira 
+e de mais 
+acessibilidade.
+Desvantagens
+Não contempla 
+todos os 
+processos da 
+empresa e não se 
+integra com outros 
+modelos (CMM).
+Apenas define a 
+estrutura dos 
+processos.
+Possui um 
+grande número 
+de práticas e 
+informações 
+necessitando de 
+muita dedicação 
+para sua 
+aplicação e 
+treinamento.
+Certificação menos 
+reconhecida para 
+tornar a empresa 
+competitiva 
+internacional 
+mente.
+Fonte: Adaptado de Maciel et al. (2011).
+39
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+CAPÍTULO 3 – TESTE DE SOFTWARE
+Os testes de software são considerados, também, técnicas de controle de 
+qualidade, cujo objetivo é avaliar o produto em construção, através da identificação e 
+remoção de erros. Devem ser conduzidos com compromisso e corretamente, a fim 
+de alcançarem com o êxito seu objetivo.
+3.1 VERIFICAÇÃO E VALIDAÇÃO DE SOFTWARE
+O teste de software é uma parte de um processo mais amplo, conhecido como 
+Verificação e Validação. Verificação refere-se ao conjunto de tarefas que garantem 
+que o software implementa corretamente uma função específica. Validação referese a um conjunto de tarefas que asseguram que o software criado acorda com os 
+requisitos exigidos pelo cliente (PRESSMAN, 2011). 
+FIQUE LIGADO!
+Verificação - “Estamos criando o produto corretamente?”
+Validação - “Estamos criando o produto certo?”
+As definições de Verificação e Validação abrangem muitas das atividades de 
+garantia da qualidade do software tais como: revisões técnicas, auditorias de 
+qualidade e configuração, monitoramento de desempenho, simulação, estudo de 
+viabilidade, revisão de documentação, revisão de base de dados, análise de 
+algoritmo, teste de desenvolvimento, teste de usabilidade, teste de qualificação, 
+teste de aceitação e teste de instalação (PRESSMAN, 2011). 
+O teste consiste no último elemento a partir do qual a qualidade pode ser 
+estimada e os erros descobertos. Porém, o teste unicamente não deve ser visto 
+como uma rede de segurança, afinal “não se testa qualidade”. Se o processo de 
+qualidade não se inicia antes da aplicação dos testes, a qualidade desejada não 
+será alcançada quando estes terminarem. A aplicação correta de métodos e 
+ferramentas, de revisões técnicas eficazes, e de um sólido gerenciamento e 
+avaliação conduzem todos à qualidade que é garantida e confirmada durante o teste
+(PRESSMAN, 2011).
+40
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+3.2 PROCESSO DE TESTE DE SOFTWARE
+Os testes de software devem seguir seu próprio processo, independente do 
+processo de desenvolvimento, podendo, dessa forma, ser iniciado paralelamente ao 
+projeto. Entretanto, ambos devem estar completamente integrados entre si. 
+As atividades de teste dependem da conclusão dos produtos gerados pelo 
+processo de desenvolvimento. Enquanto a equipe de desenvolvimento inicia o
+planejamento dos requisitos e prepara a implementação, a equipe de testes inicia o 
+planejamento e a estratégia de testes para assegurar a qualidade dos produtos que 
+serão entregues (JÚNIOR, 2011).
+O processo de teste visa definir o que será testado, englobando aspectos como 
+funcionalidade, usabilidade, performance, aceitação, confiabilidade, recuperação e 
+segurança; além de definir como e quando os testes serão realizados (JÚNIOR, 
+2011).
+Dentro dos processos, os testes de software podem ser definidos em: Caixa
+Branca e Caixa Preta.
+• Os testes de Caixa Branca avaliam o comportamento interno de um 
+componente de software e trabalham diretamente sobre o código fonte.
+• Os testes de Caixa Preta são conduzidos na interface do software, sem
+se preocupar com a estrutura lógica interna do mesmo (código-fonte). Os 
+aspectos a serem abordados são os dados de entrada e o 
+processamento, comparando-se o resultado obtido a um resultado 
+esperado, que é previamente conhecido. 
+VASCONCELOS et al. (2006) destaca os diferentes estágios (níveis) de teste 
+associados ao desenvolvimento de um produto de software:
+• Teste de unidade: visa testar individualmente cada um dos componentes 
+(programas ou módulos), procurando garantir que funcionem 
+adequadamente; 
+• Teste de integração: visa testar o relacionamento entre as diversas 
+unidades integradas. Em outras palavras, visa garantir que a interface 
+41
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+entre os módulos funcione adequadamente, pois, não há garantias de que 
+unidades testadas em separado funcionarão em conjunto; 
+• Teste de sistema: conjunto de testes cujo objetivo primordial é colocar 
+completamente à prova todo o sistema. Em outras palavras, testa a 
+integração do software com o ambiente operacional - hardware, pessoas 
+e dados reais; 
+• Teste de regressão: é o teste realizado em uma funcionalidade do 
+sistema que funciona com perfeição sempre que o sistema sofrer uma 
+atualização. Seu objetivo é verificar se essa atualização danificou algo 
+que já estava funcionando, em caso afirmativo conclui-se que o sistema 
+regrediu;
+• Teste de aceitação ou homologação: são testes realizados pelo 
+cliente/usuário com o objetivo de validar o sistema a ser implantado. A 
+motivação maior para esses testes é o fato do desenvolvedor não prever 
+como o usuário realmente usará um software em uma situação real. Os 
+testes de aceitação podem ser classificados em:
+o Testes alfa: feitos por um cliente específico, geralmente nas 
+instalações do desenvolvedor, que observa e registra os erros e/ou 
+problemas; 
+o Testes beta: realizados por possíveis clientes, em suas próprias 
+instalações, sem a supervisão do desenvolvedor, onde os clientes
+relatam, posteriormente, os problemas encontrados ao desenvolvedor.
+Nos diversos estágios (níveis) de teste e nas diversas abordagens existentes 
+podem ser executados diferentes tipos de teste. Estes podem ser executados de 
+forma conjunta, ou seja, a execução e/ou existência de um teste não exclui a 
+execução e/ou existência de outro. VASCONCELOS et al. (2006) destaca os tipos 
+de teste como sendo:
+• Teste de funcionalidade: testa a funcionalidade geral do sistema, em 
+termos de regras de negócio (fluxo de trabalho), considerando-se tanto 
+condições válidas, como inválidas; 
+42
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+• Teste de recuperação de falhas: seu objetivo é forçar o software a falhar 
+de diversas maneiras e verificar se a recuperação é adequada;
+• Teste de segurança de acesso: tenta certificar-se de que todos os 
+mecanismos de proteção embutidos no software, de fato, o protegerão de
+acessos indevidos;
+• Teste de carga: tenta confrontar o software ou os programas com 
+situações anormais. Ele executa o software de uma forma que exige 
+recursos em quantidade, frequência e volume bem maiores do que o uso 
+normal; 
+• Teste de desempenho: são testes que visam verificar o desempenho ou 
+performance do software, comumente utilizados em software de tempo 
+real;
+• Teste de portabilidade: são testes que verificam o grau de portabilidade 
+do produto de software em diferentes ambientes de hardware/software. 
+3.3 PRINCÍPIOS, ESTRATÉGIAS E FASES DE TESTES DE SOFTWARE
+Pressman (2011) sintetiza a atividade deteste de software nos seguintes 
+termos:
+• O teste consiste em um processo de executar um programa com o intuito 
+de encontrar um erro;
+• Um bom pacote de testes é aquele em que há uma alta probabilidade de 
+encontrar um erro ainda não descoberto;
+• Um teste bem-sucedido é aquele que revela um novo erro.
+Essa visão refuta a visão comumente difundida de que um teste bem-sucedido 
+é aquele que não encontra erro, uma vez que testes conduzidos com êxito são 
+aqueles que irão encontrar erros no software. 
+Sendo assim, Pressman (2011) sugere um conjunto de princípios de testes
+como sendo:
+• Princípio 1: Todos os testes devem estar alinhados com os requisitos do 
+cliente;
+43
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+• Princípio 2: Os testes devem ser planejados muito antes de ser iniciados;
+• Princípio 3: Os testes devem iniciar nos componentes individuais,
+progredir rumo a grupos de componentes integrados e, posteriormente, 
+ao sistema inteiro;
+• Princípio 4: Testes exaustivos são impossíveis.
+Segundo Pressman, a estratégia de teste de software fornece um roteiro que 
+dita os passos a serem executados em um teste, e quanto trabalho, tempo e 
+recursos serão necessários para os mesmos. Portanto, qualquer estratégia de teste 
+deve incorporar o planejamento dos testes, o projeto de casos de teste, sua
+execução, além da coleta e avaliação dos dados resultantes de cada teste aplicado.
+Uma estratégia de teste de software deve ser, ainda, flexível para promover uma
+abordagem de teste personalizada e, ao mesmo tempo, rígida para estimular um 
+planejamento razoável e o seu acompanhamento, à medida que o projeto progride
+(PRESSMAN, 2011).
+Uma estratégia de teste de software possui as seguintes características 
+genéricas:
+• Advir de revisões técnicas eficazes. Desse modo, muitos erros serão 
+eliminados antes mesmo do teste iniciar;
+• O teste inicia no nível de componente e progride em direção a integrar o 
+componente já testado ao sistema como um todo;
+• O teste é feito pelo desenvolvedor do software ou, no caso de grandes 
+projetos, por um grupo específico para o mesmo;
+• Devem ser fornecidas diretrizes para o profissional responsável pelo teste 
+e metas para o gerente.
+FIQUE ATENTO!
+O software é testado para revelar erros cometidos durante sua construção e no seu 
+projeto final. 
+Mas como conduzir os testes? 
+Devemos estabelecer um plano formal para nossos testes? 
+44
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+Devemos testar o programa como um todo ou executar testes somente em uma 
+parte dele? 
+Devemos refazer os testes quando acrescentamos novos componentes ao sistema? 
+Quando devemos envolver o cliente? 
+Essas e muitas outras questões são respondidas quando desenvolvemos uma 
+estratégia de teste de software.
+Quem realiza?
+Uma estratégia para teste de software é desenvolvida pelo gerente de projeto, pelos 
+engenheiros de software e pelos especialistas em testes.
+Por que é importante?
+O teste muitas vezes requer mais trabalho de projeto do que qualquer outra ação da 
+engenharia de software. Se for feito casualmente, perde-se tempo, fazem-se 
+esforços desnecessários, e, ainda pior, erros passam sem ser detectados. Portanto, 
+torna-se importante estabelecer uma estratégia para teste de software.
+Quais são as etapas envolvidas?
+O teste começa pelo “pequeno” e passa para o “grande”. Ou seja, os testes iniciais 
+focalizam um único componente ou um pequeno grupo de componentes 
+relacionados e aplicam-se testes para descobrir erros nos dados e na lógica de 
+processamento que foram encapsulados pelo(s) componente(s). Depois de testados, 
+os componentes devem ser integrados até que o sistema completo esteja pronto. 
+Nesse ponto, são executados muitos testes de ordem superior para descobrir erros 
+ao atender aos requisitos do cliente. À medida que os erros forem descobertos, 
+devem ser diagnosticados e corrigidos usando um processo chamado de depuração.
+Livro: PRESSMAN, R.S. Engenharia de Software: Uma Abordagem Profissional, 
+Porto Alegre, p. 401, 2011.
+Júnior (2011) descreve as etapas (fases) do ciclo de vida do Processo de Teste
+onde, para cada uma delas, são preparadas as atividades, os produtos e 
+documentos. São elas:
+• Procedimentos Iniciais: estuda os requisitos necessários;
+• Planejamento: elabora a estratégia e o plano de teste, e prepara a 
+análise de risco do projeto;
+• Especificação: elabora/revisa os casos e roteiros de testes;
+45
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+• Execução: executa os testes planejados;
+• Entrega: arquiva documentos de teste;
+• Preparação: determina como deve ser preparado o ambiente de teste.
+3.4 FUNDAMENTOS E TÉCNICAS DE TESTES
+O objetivo do teste é encontrar erros, logo um bom teste é aquele que tem alta 
+chance de encontrá-los. Portanto, os testes devem dotar de algumas características 
+que o permitam atingir seu objetivo principal, que é encontrar o maior número de 
+erros com o mínimo de esforço. Pressman (2011) lista algumas dessas
+características:
+• Operabilidade: “Quanto melhor funcionar, mais eficientemente pode ser 
+testado”.
+• Observabilidade: “O que você vê é o que você testa”.
+• Controlabilidade: “Quanto melhor pudermos controlar o software, mais o 
+teste pode ser automatizado e otimizado”.
+• Decomponibilidade: “Controlando o escopo do teste, podemos isolar 
+problemas mais rapidamente e executar um reteste mais racionalmente”.
+• Simplicidade: “Quanto menos tiver que testar, mais rapidamente 
+podemos testá-lo”.
+• Estabilidade: “Quanto menos alterações, menos interrupções no teste”.
+• Compreensibilidade: “Quanto mais informações tivermos, mais 
+inteligente será o teste”.
+Pressman (2011) ainda lista alguns atributos que definem um “bom” teste: 
+• Um bom teste tem alta probabilidade de encontrar um erro: Para 
+atingir esse objetivo, o testador deve entender o software e tentar 
+imaginar mentalmente como ele pode falhar. 
+• Um bom teste não é redundante: O tempo e os recursos de teste são 
+limitados. Não faz sentido realizar um teste que tenha a mesma finalidade 
+de outro. Cada teste deve ter uma finalidade diferente, ainda que esta 
+diferença seja sutil. 
+46
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+• Um bom teste deverá ser “o melhor possível”: Em um grupo de testes 
+com finalidades similares, as limitações de tempo e recursos podem 
+induzir à execução de apenas um subconjunto desses testes. Nessa 
+situação, deve-se escolher o teste (ou conjunto de testes) que tenha a 
+maior probabilidade de revelar um maior conjunto de erros. 
+• Um bom teste não deve ser nem muito simples nem muito complexo:
+Embora seja possível combinar algumas vezes uma série de testes em 
+um caso de teste, os possíveis efeitos colaterais associados com essa 
+abordagem podem mascarar erros devido à complexidade da mesma. Em 
+geral, é melhor que cada teste seja executado separadamente.
+Para Monge, uma das principais atividades em testes de software consiste no 
+projeto e na avaliação de casos de teste, onde são utilizadas técnicas, métodos e 
+critérios, teoricamente embasados, de forma a organizar essa atividade. Em geral, 
+as técnicas podem ser classificadas em: funcional, estrutural, baseada em erros ou, 
+ainda, uma combinação delas (MONGE, 2001). 
+A técnica funcional baseia-se na especificação do software, porém, não há 
+garantia de que todos os requisitos do programa sejam satisfeitos. 
+A técnica estrutural apoia-se na implementação e no fluxo de controle de 
+dados. 
+A técnica baseada em erros emprega informações de erros comumente 
+cometidos, no processo de desenvolvimento de software.
+3.5 AUTOMAÇÃO DOS TESTES
+A execução de testes durante a produção de um software pode ser realizada 
+de forma automatizada, por meio da utilização de ferramentas de apoio específicas 
+para essa atividade. VASCONCELOS et al. (2006) descreve algumas dessas
+ferramentas:
+47
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+• Ferramenta de geração de massa de dados: gera dados para serem 
+usados em testes, onde a geração dos dados é baseada em regras de 
+formação definidas pelos casos de teste; 
+• Ferramenta de teste de API1
+: testa método a método de uma classe, a 
+partir de uma série de combinações de parâmetros, utilizando a 
+abordagem Caixa Preta para cada método; 
+• Ferramenta de teste de GUI2
+: grava (em um script) a execução da 
+interface gráfica (cliques do mouse e entradas de teclado), repetindo a 
+entrada quantas vezes forem necessárias. O script gerado pode ser 
+modificado através do uso de uma linguagem própria; 
+• Ferramenta de teste de cobertura: após a execução da aplicação, 
+indica quais os trechos do código foram ou não executados, bem como o 
+número de vezes que determinado método (trecho de código) foi 
+executado. Utiliza a abordagem Caixa Branca; 
+• Ferramenta de teste de carga e stress: simula acessos simultâneos a 
+uma aplicação multiusuário, bem como o envio e recuperação de altos 
+volumes de dados; 
+• Ferramenta de teste de desempenho/gargalos: analisa o desempenho 
+do software, quando em execução, e detecta potenciais pontos de gargalo 
+no código fonte.
+1 O termo API corresponde à sigla “Application Programming Interface” (em português: “Interface de 
+Programação de Aplicativos”) cuja função principal é permitir que sistemas conversem entre si.
+² O termo GUI corresponde à sigla “Graphical User Interface” (em português “Interface Gráfica do 
+Usuário”) e consiste em um modelo de interface que permite a interação através do uso de 
+dispositivos gráficos.
+48
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+CONSIDERAÇÕES FINAIS
+Esta unidade teve por objetivo principal apresentar aos estudantes conceitos e 
+princípios básicos sobre a criação e desenvolvimento de software no âmbito da 
+qualidade. A qualidade de um produto de software, bem como a qualidade do 
+processo de criação desse produto é uma realidade exigida e se trata de um fator 
+essencial quanto à garantia de satisfação das necessidades do cliente. 
+Inúmeros são os fatores abrangidos pelo tema da qualidade de software. Os 
+processos, as métricas, as medidas, o gerenciamento e garantia da mesma; as 
+normas técnicas que funcionam como uma guia a ser seguido; os conjuntos de 
+testes a serem realizados, tanto no processo de produção de um software, quanto 
+no produto final, com seus princípios, fundamentos, processos, estratégias, fases e 
+técnicas. Todas essas questões foram expostas nesse material com o intuito de 
+embasar o conhecimento do leitor.
+49
+Todos os direitos são reservados ao Grupo Prominas, de acordo com a convenção internacional de direitos autorais. Nenhuma 
+parte deste material pode ser reproduzida ou utilizada, seja por meios eletrônicos ou mecânicos, i ncl usive fo tocópias o u 
+gravações, ou, por sistemas de armazenagem e recuperação de dados – sem o consentimento por escrito do Grupo Prominas.
+REFERÊNCIAS
+ASR Consultoria. Disponível em: http://asrconsultoria.com.br/index.php/mps-br/. 
+Acesso em: 19 de abril, 2020.
+JÚNIOR, A. A. Processo de Teste de Software: Uma descrição com a 
+perspectiva da Qualidade de Software. Belo Horizonte, 2011.
+MACIEL, A.C.F, et al. Análise da Qualidade de Software utilizando as Normas 
+12207, 15504, ISO 9000-3 e os Modelos CMM/CMMI E MPS.BR. Revista Científica 
+do ITPAC, Araguaína, v.4, n.4, Pub.5, out. 2011.
+MICHAELIS. Michaelis Dicionário Brasileiro da Língua Portuguesa. Disponível 
+em: https://michaelis.uol.com.br/moderno-portugues/. Acesso em: 02 de abril, 2020.
+MONGE, A. R. Um Modelo para Verificação de Qualidade e Normalização de 
+Software. Florianópolis, 2001.
+PRESSMAN, R. S. Engenharia de Software: Uma Abordagem Profissional. 7ªed.
+Porto Alegre, AMGH, 2011.
+SILVA, S. V. Qualidade de Software – Uma Abordagem Baseada na Satisfação 
+do Usuário. Rio de Janeiro, 2003.
+SOFTEX. MPS.BR – Melhoria de Processo do Software Brasileiro. Dez. 2012.
+SOUSA, de W. T. S. Estudo da Implantação do Modelo de Qualidade CMMI nas 
+Organizações. Rio de Janeiro, dez. 2006.
+VASCONCELOS, de A. M. L., ROUILLER, A.C., MACHADO, C. A. F, MEDEIROS, 
+de T. M. M. Introdução à Engenharia de Software e à Qualidade de Software.
+Lavras, 2006.
+WERKEMA, M. C. C. Ferramentas estatísticas básicas para o gerenciamento de 
+processos. Belo Horizonte: Fundação Christiano Ottoni, 1995.
